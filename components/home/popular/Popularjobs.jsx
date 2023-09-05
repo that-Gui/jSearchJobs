@@ -13,10 +13,11 @@ import { COLORS, SIZES } from '../../../constants/theme';
 import PopularJobCard from '../../common/cards/popular/PopularJobCard';
 import useFetch from '../../../lib/useFetch';
 
-const Popularjobs = () => {
+export default function Popularjobs() {
 	const router = useRouter();
 	const { data, isLoading, error } = useFetch('search', {
-		query: 'React developer',
+		query: 'React native developer, Portugal',
+		page: '1',
 		num_pages: '1',
 	});
 
@@ -59,6 +60,4 @@ const Popularjobs = () => {
 			</View>
 		</View>
 	);
-};
-
-export default Popularjobs;
+}
